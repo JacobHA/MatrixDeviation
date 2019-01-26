@@ -1,0 +1,31 @@
+# main file : calculates the "noisiness" or deviation in a given 2d array
+
+import numpy as np
+#import matplotlib.pyplot as plt
+
+def Matrix_Corr(mat):
+    
+    rows,cols = np.shape(mat)
+
+    rowCount = 0
+    colCount = 0
+    
+    for i in range(rows):
+        rowCount += np.correlate([mat[i][j] for j in range(cols)], [mat[i][(j+1)%cols] for j in range(cols)])/cols  
+    
+    for j in range(cols):
+        colCount += np.correlate([mat[i][j] for i in range(rows)], [mat[i][(j+1)%cols] for i in range(rows)])/rows
+            
+   
+    return float(0.5*(rowCount/rows) + 0.5*(colCount/cols))  # return float of avg corrs 
+
+"""
+# Test
+def corr(i):
+    mat0 = np.random.choice([0., 1.], size=(20,5), p=[i/100., (100-i)/100.])
+    return Matrix_Corr(mat0)
+
+x = range(100)
+
+plt.plot(x, [corr(j) for j in x], 'bo')
+"""
