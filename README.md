@@ -22,3 +22,5 @@ Numpy dependency
 
 Optional Matplotlib dependency to see the calculation for randomly generated matrices.
 
+Author: Jacob H. Adamczyk
+Timestamp: 26 January 2019 18:39:37 EST
