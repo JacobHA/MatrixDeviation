@@ -3,7 +3,7 @@
 import numpy as np
 #import matplotlib.pyplot as plt
 
-def Matrix_Corr(mat):
+def matrixcorr(mat):
     
     rows,cols = np.shape(mat)
 
@@ -23,7 +23,7 @@ def Matrix_Corr(mat):
 # Test
 def corr(i):
     mat0 = np.random.choice([0., 1.], size=(20,5), p=[i/100., (100-i)/100.])
-    return Matrix_Corr(mat0)
+    return matrixcorr(mat0)
 
 x = range(100)
 
