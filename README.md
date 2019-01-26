@@ -1,5 +1,5 @@
 # MatrixDeviation
-Calculates the deviation or "noisiness" of matrix elements
+Python function based on numpy to calculate the deviation or "noisiness" of matrix elements.
 
 # Usage:
 
